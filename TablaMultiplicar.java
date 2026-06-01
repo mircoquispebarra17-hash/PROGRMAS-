@@ -1,9 +1,18 @@
+import java.util.Scanner;
+
 public class TablaMultiplicar {
     public static void main(String[] args) {
-        int numero = 5;
-        System.out.println("Tabla del " + numero);
+        Scanner scanner = new Scanner(System.in);
+
+        // Ingreso del número
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        // Mostrar tabla con for
         for (int i = 1; i <= 10; i++) {
             System.out.println(numero + " x " + i + " = " + (numero * i));
-            }
-            }
-            }
+        }
+
+        scanner.close();
+    }
+}
