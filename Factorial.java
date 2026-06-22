@@ -2,29 +2,17 @@ import java.util.Scanner;
 
 public class Factorial {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
 
-        // Ingreso del número
         System.out.print("Ingrese un número: ");
-        int numero = scanner.nextInt();
+        int n = entrada.nextInt();
 
-        int i = 1;
-        long factorial = 1;
+        int factorial = 1;
 
-        // Validación
-        if (numero < 0) {
-            System.out.println("❌ No existe factorial de número negativo");
-        } else {
-            // Cálculo con while
-            while (i <= numero) {
-                factorial *= i;
-                i++;
-            }
-
-            // Resultado
-            System.out.println("El factorial de " + numero + " es: " + factorial);
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
         }
 
-        scanner.close();
+        System.out.println("Factorial: " + factorial);
     }
 }
